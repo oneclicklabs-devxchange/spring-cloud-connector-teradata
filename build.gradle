@@ -1,0 +1,19 @@
+group 'io.pivotal.fe.spring.cloud'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-spring-service-connector:1.2.3.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-cloudfoundry-connector:1.2.3.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
